@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - Eletro Kurumin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+            <h2>Eletro Kurumin</h2>
+            <p>Sistema de Estoque</p>
+
+            <nav>
+                <a href="dashboard.html" class="ativo">Painel Principal</a>
+                <a href="componentes.html">Componentes</a>
+                <a href="relatorios.html">Relatórios</a>
+            </nav>
+
+            <button id="btnSair">Sair</button>
+        </aside>
+
+        <main class="conteudo">
+
+            <header class="topo">
+                <div>
+                    <h1>Painel Principal</h1>
+                    <p>Bem-vindo ao sistema de controle de estoque.</p>
+                </div>
+
+                <span id="nomeUsuario">Usuário</span>
+            </header>
+
+            <section class="resumo">
+
+                <div class="card">
+                    <h3>Componentes cadastrados</h3>
+                    <p id="totalComponentes">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Itens em estoque</h3>
+                    <p id="totalItens">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Valor total do estoque</h3>
+                    <p id="valorEstoque">R$ 0,00</p>
+                </div>
+
+            </section>
+
+            <section class="boas-vindas">
+                <h2>Controle de Estoque</h2>
+                <p>
+                    Utilize o menu lateral para gerenciar os componentes
+                    eletrônicos e consultar os relatórios do estoque.
+                </p>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

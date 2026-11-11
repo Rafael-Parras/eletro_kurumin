@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes - Eletro Kurumin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+            <h2>Eletro Kurumin</h2>
+            <p>Sistema de Estoque</p>
+
+            <nav>
+                <a href="dashboard.html">Painel Principal</a>
+                <a href="componentes.html" class="ativo">Componentes</a>
+                <a href="relatorios.html">Relatórios</a>
+            </nav>
+
+            <button id="btnSair">Sair</button>
+        </aside>
+
+        <main class="conteudo">
+
+            <header class="topo">
+                <div>
+                    <h1>Componentes</h1>
+                    <p>Gerencie os componentes eletrônicos do estoque.</p>
+                </div>
+
+                <span id="nomeUsuario">Usuário</span>
+            </header>
+
+            <!-- FORMULÁRIO DE CADASTRO -->
+
+            <section class="form-componentes">
+
+                <h2 id="tituloFormulario">Cadastrar componente</h2>
+
+                <form id="formComponente">
+
+                    <div class="campo">
+                        <label for="nome">Nome do componente</label>
+                        <input type="text" id="nome" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="descricao">Descrição</label>
+                        <input type="text" id="descricao">
+                    </div>
+
+                    <div class="campos-linha">
+
+                        <div class="campo">
+                            <label for="preco">Preço unitário (R$)</label>
+                            <input type="number" id="preco" min="0" step="0.01" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="quantidade">Quantidade</label>
+                            <input type="number" id="quantidade" min="0" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="categoria">ID da categoria</label>
+                            <input type="number" id="categoria" min="1" required>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" id="btnCadastrar">
+                        Cadastrar componente
+                    </button>
+
+                    <button type="button" id="btnCancelar" style="display: none;">
+                        Cancelar edição
+                    </button>
+
+                    <p id="mensagemComponente"></p>
+
+                </form>
+
+            </section>
+
+            <!-- LISTA DE COMPONENTES -->
+
+            <section class="lista-componentes">
+
+                <h2>Componentes cadastrados</h2>
+
+                <div class="tabela-container">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Preço</th>
+                                <th>Quantidade</th>
+                                <th>Categoria</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="listaComponentes">
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/componentes.js"></script>
+
+</body>
+</html>

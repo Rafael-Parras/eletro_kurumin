@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - Eletro Kurumin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+            <h2>Eletro Kurumin</h2>
+
+            <nav>
+                <a href="dashboard.html">Painel Principal</a>
+                <a href="componentes.html">Componentes</a>
+                <a href="relatorios.html" class="active">Relatórios</a>
+            </nav>
+
+            <button id="btnSair">Sair</button>
+        </aside>
+
+        <main class="conteudo">
+
+            <header class="topo">
+                <h1>Relatórios</h1>
+                <span id="nomeUsuario"></span>
+            </header>
+
+            <section class="resumo">
+
+                <div class="card">
+                    <h3>Componentes cadastrados</h3>
+                    <p id="totalComponentes">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total de itens em estoque</h3>
+                    <p id="totalItens">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Valor total do estoque</h3>
+                    <p id="valorEstoque">R$ 0,00</p>
+                </div>
+
+            </section>
+
+            <section class="lista-componentes">
+
+                <h2>Relatório detalhado</h2>
+
+                <div class="tabela-container">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Componente</th>
+                                <th>Descrição</th>
+                                <th>Preço unitário</th>
+                                <th>Quantidade</th>
+                                <th>Valor total</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="listaRelatorio">
+                            <tr>
+                                <td colspan="5">Carregando relatório...</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+<script src="js/relatorios.js"></script>
+
+</body>
+</html>
